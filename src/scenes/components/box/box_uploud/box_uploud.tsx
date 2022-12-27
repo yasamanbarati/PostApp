@@ -27,7 +27,7 @@ export const BoxUploud = () => {
     return (
         <ButtonBox variant="contained" disableElevation={true} aria-label="upload picture">
             <input accept="image/*" type="file" />
-            <CutsomTypography text="اضافه کنید" textColor="primary" />
+            <CutsomTypography text="اضافه کنید" textColor="primary" textStyle={{ fontSize: "1rem", fontWeight: "600" }} />
             <Add color="primary" fontSize="medium" fontWeight="800" />
         </ButtonBox>
     )

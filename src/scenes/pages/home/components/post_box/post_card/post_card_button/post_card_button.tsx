@@ -4,7 +4,9 @@ const ButtonStyle = {
     width: "80%",
     height: "80%",
     border: "2.5px solid #d32f2f",
-    borderRadius: "12px"
+    borderRadius: "12px",
+    fontWeight: "600",
+    fontSize: "0.9rem",
 }
 export const PostCardButton = () => {
     return (

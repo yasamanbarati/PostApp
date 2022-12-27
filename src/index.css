@@ -1,4 +1,4 @@
-/* @font-face{
+@font-face{
   font-family: Vazir;
   font-style: normal;
   font-weight: 800;
@@ -10,20 +10,11 @@
 @font-face{
   font-family: Vazir;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   src: url('./setup/assets/font/Vazir-Medium.eot');
   src: url('./setup/assets/font/Vazir-Medium.eot') format('mbedded-opentype'),
        url('./setup/assets/font/Vazir-Medium.woff') format('woff'),
        url('./setup/assets/font/Vazir-Medium.ttf') format('truetype');
-}
-@font-face{
-  font-family: Vazir;
-  font-style: normal;
-  font-weight: 600;
-  src: url('./setup/assets/font/Vazir-FD.eot');
-  src: url('./setup/assets/font/Vazir-FD.eot') format('mbedded-opentype'),
-       url('./setup/assets/font/Vazir-FD.woff') format('woff'),
-       url('./setup/assets/font/Vazir-FD.ttf') format('truetype');
 }
 @font-face{
   font-family: Vazir;
@@ -33,7 +24,7 @@
   src: url('./setup/assets/font/Vazir-Light-FD.eot') format('mbedded-opentype'),
        url('./setup/assets/font/Vazir-Light-FD.woff') format('woff'),
        url('./setup/assets/font/Vazir-Light-FD.ttf') format('truetype');
-} */
+}
 body {
   direction: rtl;
 }
