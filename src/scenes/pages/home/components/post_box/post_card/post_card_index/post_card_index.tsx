@@ -2,7 +2,7 @@ import { Grid } from '@mui/material'
 import { CutsomTypography } from 'scenes/components/box/box_typography/box_typography'
 
 interface props {
-    index: string
+    index: string | undefined
 }
 
 const indexStyle = {
