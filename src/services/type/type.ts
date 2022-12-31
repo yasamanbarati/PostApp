@@ -13,5 +13,7 @@ export interface ButtonProps {
   color?: any
 }
 export interface Imageprops {
-  imageSrc: string
+  index?: string | undefined
+  imageSrc?: string | undefined
+  imageBlob?: string | undefined
 }

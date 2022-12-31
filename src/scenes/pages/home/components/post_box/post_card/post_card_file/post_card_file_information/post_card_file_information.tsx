@@ -5,16 +5,16 @@ import { textStyle } from "services/style/style"
 import { Imageprops } from "services/type/type"
 
 const InformationBox = styled(Box)({
-    width: "100%",
+    width: "89%",
     height: "100%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
 })
-export const PostCardFileInformation = ({ imageSrc }: Imageprops) => {
+export const PostCardFileInformation = ({ imageBlob, imageSrc }: Imageprops) => {
     return (
         <InformationBox>
-            <BoxImage imageSrc={imageSrc} />
+            <BoxImage imageBlob={imageBlob} />
             <CutsomTypography text={imageSrc} textStyle={textStyle} />
         </InformationBox>
     )

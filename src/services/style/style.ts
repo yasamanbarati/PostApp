@@ -15,5 +15,8 @@ export const textStyle = {
   lineHeight: '20px',
   textAlign: 'right',
   color: '#000',
-  width: '85%',
+  width: '78%',
+  textOverflow: 'ellipsis',
+  overflow: "hidden",
+  whiteSpace: "nowrap"
 }
