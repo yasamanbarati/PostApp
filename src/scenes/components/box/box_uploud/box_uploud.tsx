@@ -4,8 +4,10 @@ import { Add } from "@mui/icons-material"
 import { CutsomTypography } from "../box_typography/box_typography"
 import { dispatch } from "setup/redux/store"
 import { setPostListAction } from "scenes/_slice/home.slice"
+import { MediaBodyType } from "scenes/_slice/type"
 
 const ButtonBox = styled(Button)(({ theme }) => ({
+    cursor: "pointer",
     position: "relative",
     height: "150px",
     backgroundColor: theme.palette.primary.contrastText,
@@ -29,17 +31,27 @@ const ButtonBox = styled(Button)(({ theme }) => ({
 export const BoxUploud = () => {
 
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.target.value) {
-            dispatch(setPostListAction(e.target.value))
-            console.log(e.target.value);
+
+        if (!e.target.files) return
+
+        const blob = URL.createObjectURL(e.target.files[0])
+        const ImageName = e.target.files[0].name
+        const fileObj: MediaBodyType = {
+            type: "IMAGE",
+            imageBlob: blob,
+            name: ImageName,
         }
+        console.log(blob);
+        console.log(ImageName);
+
+        dispatch(setPostListAction(fileObj))
     }
 
     return (
         <ButtonBox variant="contained" disableElevation={true} aria-label="upload picture">
             <input accept="image/*" type="file" onChange={handleFileChange} />
-            <CutsomTypography text="اضافه کنید" textColor="primary" textStyle={{ fontSize: "1rem", fontWeight: "600" }} />
             <Add color="primary" fontSize="medium" fontWeight="800" />
+            <CutsomTypography text="اضافه کنید" textColor="primary" textStyle={{ fontSize: "1rem", fontWeight: "600", margin: "8px" }} />
         </ButtonBox>
     )
 }

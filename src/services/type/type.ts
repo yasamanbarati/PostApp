@@ -14,5 +14,6 @@ export interface ButtonProps {
 }
 export interface Imageprops {
   index?: string | undefined
-  imageSrc: string
+  imageSrc?: string | undefined
+  imageBlob?: string | undefined
 }

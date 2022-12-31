@@ -7,8 +7,8 @@ const Imagestyle = {
   borderRadius: "15px",
   margin: "5px 10px"
 }
-export const BoxImage = ({ imageSrc }: Imageprops) => {
+export const BoxImage = ({ imageBlob }: Imageprops) => {
   return (
-    <img src={imageSrc} alt="post image" style={Imagestyle} />
+    <img src={imageBlob} alt="post image" style={Imagestyle} />
   )
 }
