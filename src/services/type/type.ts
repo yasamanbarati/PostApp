@@ -1,8 +1,9 @@
 import { SxProps } from '@mui/material'
+import { CSSProperties } from 'react'
 
 export interface TextBoxProps {
   variant?: any
-  textStyle?: any
+  textStyle?: SxProps
   text: string | undefined
   textColor?: string
 }
@@ -16,4 +17,5 @@ export interface Imageprops {
   index?: string | undefined
   imageSrc?: string | undefined
   imageBlob?: string | undefined
+  Imagestyle?: CSSProperties
 }

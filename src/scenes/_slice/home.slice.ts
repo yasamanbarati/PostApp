@@ -22,7 +22,7 @@ const setPostList = (
 }
 const setRemovePostCard = (
   state: ReduxBodyType,
-  action: PayloadAction<string>,
+  action: PayloadAction<string | undefined>,
 ) => {
   const item = state.PostList.findIndex(item => {
     return item.name === action.payload
