@@ -11,10 +11,21 @@ const InformationBox = styled(Box)({
     justifyContent: "space-between",
     alignItems: "center",
 })
+const Imagestyle = {
+    width: "60px",
+    height: "60px",
+    borderRadius: "15px",
+    margin: "5px 10px",
+    backgroundImage: "url(`w3css.gif`)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "60px 60px",
+    // objectFit: "contain",
+}
+
 export const PostCardFileInformation = ({ imageBlob, imageSrc }: Imageprops) => {
     return (
         <InformationBox>
-            <BoxImage imageBlob={imageBlob} />
+            <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
             <CutsomTypography text={imageSrc} textStyle={textStyle} />
         </InformationBox>
     )
