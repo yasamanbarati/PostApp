@@ -5,7 +5,7 @@ import { PostCardFileInformation } from "./post_card_file_information/post_card_
 
 export const PostCardFile = ({ imageSrc, imageBlob }: Imageprops) => {
     return (
-        <Grid item xs={9} display="flex" >
+        <Grid item sm={9} xs={8} display="flex" >
             <PostCardFileIcon />
             <PostCardFileInformation imageSrc={imageSrc} imageBlob={imageBlob} />
         </Grid>

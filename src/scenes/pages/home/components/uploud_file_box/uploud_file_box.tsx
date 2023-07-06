@@ -5,7 +5,7 @@ import { titleStyle } from "services/style/style"
 
 export const UploudFileBox = () => {
   return (
-    <Box>
+    <Box mt={3}>
       <CutsomTypography text="بارگذاری ویدئو با عکس" textStyle={titleStyle} />
       <BoxUploud />
     </Box>
