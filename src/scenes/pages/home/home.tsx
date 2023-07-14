@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <Container maxWidth="lg">
             <Grid container justifyContent="center" alignItems="center">
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6}>
                     <UploudFileBox />
                     <PostBox />
                 </Grid>

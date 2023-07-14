@@ -18,4 +18,5 @@ export interface Imageprops {
   imageSrc?: string | undefined
   imageBlob?: string | undefined
   Imagestyle?: CSSProperties
+  type?: 'IMAGE' | 'VIDEO'
 }

@@ -1,7 +1,7 @@
 export type MediaBodyType =
   | {
       type: 'IMAGE'
-      imageBlob: string | undefined
+      imageBlob: string | undefined | any
       name: string | undefined
     }
   | {

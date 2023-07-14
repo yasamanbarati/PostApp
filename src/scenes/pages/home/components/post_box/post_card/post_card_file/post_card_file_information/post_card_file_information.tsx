@@ -22,10 +22,20 @@ const Imagestyle = {
     // objectFit: "contain",
 }
 
-export const PostCardFileInformation = ({ imageBlob, imageSrc }: Imageprops) => {
+export const PostCardFileInformation = ({ imageBlob, imageSrc, type }: Imageprops) => {
     return (
         <InformationBox>
-            <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
+            {type === 'IMAGE' ?
+                <>
+                    <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
+                </>
+                :
+                <>
+                    <video controls style={Imagestyle} >
+                        <source src={imageBlob} type="video/mp4" />
+                    </video>
+                </>
+            }
             <CutsomTypography text={imageSrc} textStyle={textStyle} />
         </InformationBox>
     )

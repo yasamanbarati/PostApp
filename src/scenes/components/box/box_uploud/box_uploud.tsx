@@ -37,20 +37,33 @@ export const BoxUploud = () => {
 
         const blob = URL.createObjectURL(e.target.files[0])
         const ImageName = e.target.files[0].name
-        const fileObj: MediaBodyType = {
-            type: "IMAGE",
-            imageBlob: blob,
-            name: ImageName,
+        const typeFile = e.target.files[0].type
+        if (typeFile === 'image/jpeg') {
+            const fileObj: MediaBodyType = {
+                type: "IMAGE",
+                imageBlob: blob,
+                name: ImageName,
+            }
+
+            dispatch(setPostListAction(fileObj))
+        } else if (typeFile === 'video/mp4') {
+            const fileObj: MediaBodyType = {
+                type: "VIDEO",
+                videoBlob: blob,
+                posterBlob: blob,
+                name: ImageName,
+            }
+            dispatch(setPostListAction(fileObj))
         }
+        console.log(e.target.files[0].type)
         console.log(blob);
         console.log(ImageName);
 
-        dispatch(setPostListAction(fileObj))
     }
 
     return (
         <ButtonBox variant="contained" disableElevation={true} aria-label="upload picture">
-            <input accept="image/*" type="file" onChange={handleFileChange} />
+            <input accept="video/*,image/*" type="file" onChange={handleFileChange} multiple={true} />
             <Add color="primary" fontSize="medium" fontWeight="800" />
             <CutsomTypography text="اضافه کنید" textColor="primary" textStyle={{ fontSize: "1rem", fontWeight: "600", margin: "8px" }} />
         </ButtonBox>
