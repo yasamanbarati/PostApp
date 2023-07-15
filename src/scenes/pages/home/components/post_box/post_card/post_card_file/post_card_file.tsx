@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import { Imageprops } from 'services/type/type'
+import { imageProps } from 'services/type/type'
 import { PostCardFileIcon } from './post_card_file_icon/post_card_file_icon'
 import { PostCardFileInformation } from './post_card_file_information/post_card_file_information'
 
@@ -8,7 +8,7 @@ export const PostCardFile = ({
   imageBlob,
   type,
   videoBlob,
-}: Imageprops) => {
+}: imageProps) => {
   return (
     <Grid item sm={9} xs={8} display="flex">
       <PostCardFileIcon />

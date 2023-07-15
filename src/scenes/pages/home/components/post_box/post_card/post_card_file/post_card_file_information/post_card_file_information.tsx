@@ -1,8 +1,9 @@
 import { Box, styled } from '@mui/material'
-import { BoxImage } from 'scenes/components/box/box_image/box_image'
-import { CutsomTypography } from 'scenes/components/box/box_typography/box_typography'
+import { Image } from 'scenes/components/box/box_image/box_image'
+import { VideoBox } from 'scenes/components/box/box_video/box_video'
+import { CustomTypography } from 'scenes/components/box/box_typography/box_typography'
 import { textStyle } from 'services/style/style'
-import { Imageprops } from 'services/type/type'
+import { imageProps } from 'services/type/type'
 
 const InformationBox = styled(Box)({
   width: '89%',
@@ -11,42 +12,29 @@ const InformationBox = styled(Box)({
   justifyContent: 'space-between',
   alignItems: 'center',
 })
-const Imagestyle = {
+const imageStyle = {
   width: '60px',
   height: '60px',
   borderRadius: '15px',
   margin: '5px 10px',
-  backgroundImage: 'url(`w3css.gif`)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: '60px 60px',
-  // objectFit: "contain",
 }
 
-// refactor Imageprops to imageProps
 export const PostCardFileInformation = ({
   imageBlob,
   imageSrc,
   type,
   videoBlob,
-}: Imageprops) => {
+}: imageProps) => {
   return (
     <InformationBox>
       {type === 'IMAGE' ? (
-        // Imagestyle to imageStyle
-        <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
+        <Image imageBlob={imageBlob} imageStyle={imageStyle} />
       ) : (
-        <>
-          {/* <Player
-                        src={videoBlob}
-                    >
-                        <BigPlayButton position="center" />
-                    </Player> */}
-          <video controls style={Imagestyle}>
-            <source src={videoBlob} type="video/mp4" />
-          </video>
-        </>
+        <VideoBox imageStyle={imageStyle} videoBlob={videoBlob} />
       )}
-      <CutsomTypography text={imageSrc} textStyle={textStyle} />
+      <CustomTypography text={imageSrc} textStyle={textStyle} />
     </InformationBox>
   )
 }

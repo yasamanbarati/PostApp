@@ -1,8 +1,19 @@
-import { Grid } from '@mui/material'
-import { Imageprops } from 'services/type/type'
+import { Grid, styled } from '@mui/material'
+import { imageProps } from 'services/type/type'
 import { PostCardButton } from './post_card_button/post_card_button'
 import { PostCardFile } from './post_card_file/post_card_file'
 import { PostCardIndex } from './post_card_index/post_card_index'
+
+const GridPostCard = styled(Grid)({
+  width: "100%",
+  height: "70px",
+  justifyContent: "space-between",
+  alignItems: "center",
+})
+const GridPostCardFile = styled(Grid)({
+  justifyContent: "space-between",
+  alignItems: "center",
+})
 
 export const PostCard = ({
   index,
@@ -10,25 +21,11 @@ export const PostCard = ({
   imageBlob,
   type,
   videoBlob,
-}: Imageprops) => {
-  console.table([imageBlob, imageSrc])
+}: imageProps) => {
   return (
-    // refactor : use Styled for inline styled and remove inline styled
-    <Grid
-      width="100%"
-      height="70px"
-      container
-      justifyContent="space-between"
-      alignItems="center"
-    >
+    <GridPostCard container>
       <PostCardIndex index={index} />
-      <Grid
-        container
-        item
-        xs={11}
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <GridPostCardFile container item xs={11}>
         <PostCardFile
           imageSrc={imageSrc}
           imageBlob={imageBlob}
@@ -36,7 +33,7 @@ export const PostCard = ({
           videoBlob={videoBlob}
         />
         <PostCardButton imageSrc={imageSrc} />
-      </Grid>
-    </Grid>
+      </GridPostCardFile>
+    </GridPostCard>
   )
 }

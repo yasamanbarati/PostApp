@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import { CutsomTypography } from 'scenes/components/box/box_typography/box_typography'
+import { CustomTypography } from 'scenes/components/box/box_typography/box_typography'
 
 interface props {
   index: string | undefined
@@ -22,8 +22,7 @@ const indexStyle = {
 export const PostCardIndex = ({ index }: props) => {
   return (
     <Grid item xs={1}>
-      {/* change CutsomTypography to CustomTypography */}
-      <CutsomTypography text={index} textStyle={indexStyle} />
+      <CustomTypography text={index} textStyle={indexStyle} />
     </Grid>
   )
 }

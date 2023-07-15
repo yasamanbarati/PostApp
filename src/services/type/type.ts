@@ -13,19 +13,12 @@ export interface ButtonProps {
   sxStyle?: SxProps
   color?: any
 }
-export interface Imageprops {
+export interface imageProps {
   index?: string | undefined
   imageSrc?: string | undefined
   imageBlob?: string | undefined
-  Imagestyle?: CSSProperties
+  imageStyle?: CSSProperties
   videoBlob?: string | undefined
   posterBlob?: string | undefined
   type?: 'IMAGE' | 'VIDEO'
 }
-// export interface Videoprops {
-//   index?: string | undefined
-//   videoBlob?: string | undefined
-//   posterBlob?: string | undefined
-//   Imagestyle?: CSSProperties
-//   type?: 'VIDEO'
-// }

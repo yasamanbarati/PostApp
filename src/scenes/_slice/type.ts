@@ -1,5 +1,3 @@
-// refactor
-
 export type MediaBodyType =
   | {
       type: 'IMAGE'
@@ -12,7 +10,6 @@ export type MediaBodyType =
       posterBlob: string
       name: string
     }
-
 export type MediaBodyTypeEmpty =
   | {
       type: 'IMAGE'
