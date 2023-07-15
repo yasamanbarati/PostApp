@@ -13,11 +13,14 @@ const setPostList = (
   state: ReduxBodyType,
   action: PayloadAction<MediaBodyType>,
 ) => {
+  // refactor => remove NewPost attribute
+  console.log(action.payload)
+
   const NewPost = action.payload
   // console.log(`NewPost`, NewPost)
-  const isExist = state.PostList.findIndex(e => e.name === NewPost.name)
-  if (isExist <= 0) {
-    state.PostList = [...state.PostList, NewPost]
+  const isExist = state.PostList.findIndex(e => e.name === action.payload.name)
+  if (isExist === -1) {
+    state.PostList = [...state.PostList, action.payload]
   }
 }
 const setRemovePostCard = (

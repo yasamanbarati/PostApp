@@ -1,14 +1,16 @@
+// refactor
+
 export type MediaBodyType =
   | {
       type: 'IMAGE'
-      imageBlob: string | undefined
-      name: string | undefined
+      imageBlob: string
+      name: string
     }
   | {
       type: 'VIDEO'
-      videoBlob: string | undefined
-      posterBlob: string | undefined
-      name: string | undefined
+      videoBlob: string
+      posterBlob: string
+      name: string
     }
 
 export type MediaBodyTypeEmpty =
