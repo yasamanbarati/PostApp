@@ -3,26 +3,27 @@ import { MediaBodyType } from './type'
 
 interface ReduxBodyType {
   PostList: MediaBodyType[]
+  loading: Boolean
 }
 
 const initialState: ReduxBodyType = {
   PostList: [],
+  loading: true,
 }
 
 const setPostList = (
   state: ReduxBodyType,
   action: PayloadAction<MediaBodyType>,
 ) => {
-  // refactor => remove NewPost attribute
-  console.log(action.payload)
-
-  const NewPost = action.payload
-  // console.log(`NewPost`, NewPost)
   const isExist = state.PostList.findIndex(e => e.name === action.payload.name)
   if (isExist === -1) {
     state.PostList = [...state.PostList, action.payload]
   }
 }
+const setLoading = (state: ReduxBodyType, action: PayloadAction<Boolean>) => {
+  state.loading = action.payload
+}
+
 const setRemovePostCard = (
   state: ReduxBodyType,
   action: PayloadAction<string | undefined>,
@@ -41,12 +42,14 @@ const homeSlice = createSlice({
   reducers: {
     setPostList,
     setRemovePostCard,
+    setLoading,
   },
 })
 
 export const {
   setPostList: setPostListAction,
   setRemovePostCard: setRemovePostCardAction,
+  setLoading: setLoadingAction,
 } = homeSlice.actions
 
 export default homeSlice.reducer
