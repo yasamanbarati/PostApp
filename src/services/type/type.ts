@@ -18,5 +18,14 @@ export interface Imageprops {
   imageSrc?: string | undefined
   imageBlob?: string | undefined
   Imagestyle?: CSSProperties
+  videoBlob?: string | undefined
+  posterBlob?: string | undefined
   type?: 'IMAGE' | 'VIDEO'
 }
+// export interface Videoprops {
+//   index?: string | undefined
+//   videoBlob?: string | undefined
+//   posterBlob?: string | undefined
+//   Imagestyle?: CSSProperties
+//   type?: 'VIDEO'
+// }

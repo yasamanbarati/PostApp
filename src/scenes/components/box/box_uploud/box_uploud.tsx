@@ -44,7 +44,6 @@ export const BoxUploud = () => {
                 imageBlob: blob,
                 name: ImageName,
             }
-
             dispatch(setPostListAction(fileObj))
         } else if (typeFile === 'video/mp4') {
             const fileObj: MediaBodyType = {
@@ -55,9 +54,9 @@ export const BoxUploud = () => {
             }
             dispatch(setPostListAction(fileObj))
         }
-        console.log(e.target.files[0].type)
-        console.log(blob);
-        console.log(ImageName);
+        // console.log(e.target.files[0].type)
+        // console.log(blob);
+        // console.log(ImageName);
 
     }
 

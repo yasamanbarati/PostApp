@@ -14,7 +14,7 @@ const setPostList = (
   action: PayloadAction<MediaBodyType>,
 ) => {
   const NewPost = action.payload
-  console.log(`NewPost`, NewPost)
+  // console.log(`NewPost`, NewPost)
   const isExist = state.PostList.findIndex(e => e.name === NewPost.name)
   if (isExist <= 0) {
     state.PostList = [...state.PostList, NewPost]

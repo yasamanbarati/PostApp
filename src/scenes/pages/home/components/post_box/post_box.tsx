@@ -9,9 +9,36 @@ export const PostBox = () => {
   return (
     <Box my={2}>
       {List.map((item, index) => {
-        if (item.type === 'IMAGE' && 'VIDEO') {
-          return <PostCard key={index} index={(index + 1).toString()} imageSrc={item.name} imageBlob={item.imageBlob} type={item.type} />
+        switch (item.type) {
+          case 'VIDEO':
+            return <PostCard
+              key={index}
+              index={(index + 1).toString()}
+              imageSrc={item.name}
+              type={item.type}
+              videoBlob={item.videoBlob}
+            />
+          case 'IMAGE': <PostCard
+            key={index}
+            index={(index + 1).toString()}
+            imageSrc={item.name}
+            imageBlob={item.imageBlob}
+            type={item.type}
+          />
+            // console.log(item.type, item.name, item.imageBlob);
+            console.table([item.name, item.imageBlob]);
+
         }
+        // if (item.type === 'VIDEO' || 'IMAGE') {
+        //   return <PostCard
+        //     key={index}
+        //     index={(index + 1).toString()}
+        //     imageSrc={item.name}
+        //     imageBlob={item.imageBlob}
+        //     type={item.type}
+        //   // videoBlob={item.videoBlob}
+        //   />
+        // }
       })}
     </Box>
   )

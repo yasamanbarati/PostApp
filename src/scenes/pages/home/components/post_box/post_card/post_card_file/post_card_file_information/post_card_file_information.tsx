@@ -22,17 +22,22 @@ const Imagestyle = {
     // objectFit: "contain",
 }
 
-export const PostCardFileInformation = ({ imageBlob, imageSrc, type }: Imageprops) => {
+export const PostCardFileInformation = ({ imageBlob, imageSrc, type, videoBlob }: Imageprops) => {
+    console.table([imageBlob, imageSrc]);
+
     return (
         <InformationBox>
             {type === 'IMAGE' ?
-                <>
-                    <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
-                </>
+                <BoxImage imageBlob={imageBlob} Imagestyle={Imagestyle} />
                 :
                 <>
+                    {/* <Player
+                        src={videoBlob}
+                    >
+                        <BigPlayButton position="center" />
+                    </Player> */}
                     <video controls style={Imagestyle} >
-                        <source src={imageBlob} type="video/mp4" />
+                        <source src={videoBlob} type="video/mp4" />
                     </video>
                 </>
             }
