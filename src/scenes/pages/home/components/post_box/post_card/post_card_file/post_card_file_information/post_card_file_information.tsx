@@ -12,6 +12,7 @@ const InformationBox = styled(Box)({
   justifyContent: 'space-between',
   alignItems: 'center',
 })
+
 const imageStyle = {
   width: '60px',
   height: '60px',
