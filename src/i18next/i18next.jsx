@@ -2,14 +2,14 @@ import i18n from 'i18next'
 import { reactI18nextModule } from 'react-i18next'
 
 import translationEN from '../public/locales/en/translation.json'
-import translationPN from '../public/locales/pa/translation.json'
+import translationFa from '../public/locales/fa/translation.json'
 
 const resources = {
   en: {
     translation: translationEN,
   },
-  pn: {
-    translation: translationPN,
+  fa: {
+    translation: translationFa,
   },
 }
 
