@@ -31,8 +31,8 @@ const setRemovePostCard = (
   const item = state.PostList.findIndex(item => {
     return item.name === action.payload
   })
-  state.PostList = state.PostList.filter((index, list) => {
-    return list !== item
+  state.PostList = state.PostList.filter((list, index) => {
+    return index !== item
   })
 }
 
