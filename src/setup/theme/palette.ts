@@ -7,11 +7,11 @@ export const palette = {
     contrastText: '#888888',
   },
   primary: {
-    main: '#658fff',
-    contrastText: '#e6f4ff',
+    main: '#174742',
+    contrastText: '#9dffe9',
   },
-  black: '#000000',
-  red: '#EE6D57',
+  black: '#071813',
+  red: '#c3314c',
 }
 
 declare module '@mui/material/styles' {
