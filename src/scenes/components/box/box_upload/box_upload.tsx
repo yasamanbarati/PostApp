@@ -1,11 +1,11 @@
-import { ChangeEvent, useEffect } from 'react'
-import { Button, styled } from '@mui/material'
+import { ChangeEvent } from 'react'
+import { Button, styled, Typography } from '@mui/material'
 import { Add } from '@mui/icons-material'
-import { CustomTypography } from '../box_typography/box_typography'
 import { dispatch } from 'setup/redux/store'
 import { setPostListAction } from 'scenes/_slice/home.slice'
 import { MediaBodyType } from 'scenes/_slice/type'
 import { useAppSelector } from 'setup/redux/react-hooks'
+import { useTranslation } from 'react-i18next'
 
 const ButtonBox = styled(Button)(({ theme }) => ({
   cursor: 'pointer',
@@ -32,7 +32,7 @@ const ButtonBox = styled(Button)(({ theme }) => ({
 }))
 
 export const UploadFile = () => {
-
+  const { t } = useTranslation()
   const loading = useAppSelector(state => state.home.loading)
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -78,11 +78,14 @@ export const UploadFile = () => {
         multiple={true}
       />
       <Add color="primary" fontSize="medium" fontWeight="800" />
-      <CustomTypography
-        text="اضافه کنید"
-        textColor="primary"
-        textStyle={{ fontSize: '1rem', fontWeight: '600', margin: '8px' }}
-      />
+      <Typography
+        sx={{
+          fontSize: '1rem', fontWeight: '600', margin: '8px'
+        }}
+        color="primary"
+      >
+        {t('ButtonTitle')}
+      </Typography>
     </ButtonBox>
   )
 }

@@ -1,7 +1,6 @@
-import { Box, styled } from '@mui/material'
+import { Box, styled, Typography } from '@mui/material'
 import { Image } from 'scenes/components/box/box_image/box_image'
 import { VideoBox } from 'scenes/components/box/box_video/box_video'
-import { CustomTypography } from 'scenes/components/box/box_typography/box_typography'
 import { textStyle } from 'services/style/style'
 import { imageProps } from 'services/type/type'
 
@@ -28,6 +27,7 @@ export const PostCardFileInformation = ({
   type,
   videoBlob,
 }: imageProps) => {
+
   return (
     <InformationBox>
       {type === 'IMAGE' ? (
@@ -35,7 +35,10 @@ export const PostCardFileInformation = ({
       ) : (
         <VideoBox imageStyle={imageStyle} videoBlob={videoBlob} />
       )}
-      <CustomTypography text={imageSrc} textStyle={textStyle} />
+      <Typography
+        sx={textStyle}
+      >{imageSrc}
+      </Typography>
     </InformationBox>
   )
 }

@@ -4,11 +4,13 @@ import { MediaBodyType } from './type'
 interface ReduxBodyType {
   PostList: MediaBodyType[]
   loading: Boolean
+  language: string
 }
 
 const initialState: ReduxBodyType = {
   PostList: [],
   loading: true,
+  language: 'fa',
 }
 
 const setPostList = (
@@ -22,6 +24,11 @@ const setPostList = (
 }
 const setLoading = (state: ReduxBodyType, action: PayloadAction<Boolean>) => {
   state.loading = action.payload
+}
+const setLanguage = (state: ReduxBodyType, action: PayloadAction<string>) => {
+  state.language = action.payload
+  console.log('state.language', state.language)
+  console.log('action.payload', action.payload)
 }
 
 const setRemovePostCard = (
@@ -43,6 +50,7 @@ const homeSlice = createSlice({
     setPostList,
     setRemovePostCard,
     setLoading,
+    setLanguage,
   },
 })
 
@@ -50,6 +58,7 @@ export const {
   setPostList: setPostListAction,
   setRemovePostCard: setRemovePostCardAction,
   setLoading: setLoadingAction,
+  setLanguage: setLanguageAction,
 } = homeSlice.actions
 
 export default homeSlice.reducer
