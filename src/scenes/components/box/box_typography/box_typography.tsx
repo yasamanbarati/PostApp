@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material'
+import { useTranslation } from 'react-i18next';
 import { TextBoxProps } from 'services/type/type'
 
 export const CustomTypography = ({
@@ -7,15 +8,17 @@ export const CustomTypography = ({
   text,
   textColor,
 }: TextBoxProps) => {
-  return (
-    <Typography
-      variant={variant}
-      sx={{
-        ...textStyle,
-      }}
-      color={textColor}
-    >
-      {text}
-    </Typography>
-  )
+
+  const { t } = useTranslation()
+
+  return <Typography
+    variant={variant}
+    sx={{
+      ...textStyle,
+    }}
+    color={textColor}
+  >
+    {t(`${text}`)}
+  </Typography>
+
 }

@@ -1,5 +1,4 @@
-import { Grid } from '@mui/material'
-import { CustomTypography } from 'scenes/components/box/box_typography/box_typography'
+import { Grid, Typography } from '@mui/material'
 
 interface props {
   index: string | undefined
@@ -22,7 +21,7 @@ const indexStyle = {
 export const PostCardIndex = ({ index }: props) => {
   return (
     <Grid item xs={1}>
-      <CustomTypography text={index} textStyle={indexStyle} />
+      <Typography sx={indexStyle}>{index}</Typography>
     </Grid>
   )
 }

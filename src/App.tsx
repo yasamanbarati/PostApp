@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { store } from 'setup/redux/store'
 import { theme } from 'setup/theme'
 import { Home } from 'scenes/pages/home/home'
+import 'i18n/config'
 
 export const App = () => {
   return (
