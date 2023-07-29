@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PostApp/static/css/main.cad59dcc.css",
-    "main.js": "/PostApp/static/js/main.6ae9e5d2.js",
+    "main.js": "/PostApp/static/js/main.c96b46e7.js",
     "static/js/787.dbd1936b.chunk.js": "/PostApp/static/js/787.dbd1936b.chunk.js",
     "static/media/Vazir-Medium.eot": "/PostApp/static/media/Vazir-Medium.c7abd777d3d000ef3072.eot",
     "static/media/Vazir-Medium.ttf": "/PostApp/static/media/Vazir-Medium.768ad69912e4fc55e9dc.ttf",
@@ -18,11 +18,11 @@
     "static/media/slick.woff": "/PostApp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/PostApp/index.html",
     "main.cad59dcc.css.map": "/PostApp/static/css/main.cad59dcc.css.map",
-    "main.6ae9e5d2.js.map": "/PostApp/static/js/main.6ae9e5d2.js.map",
+    "main.c96b46e7.js.map": "/PostApp/static/js/main.c96b46e7.js.map",
     "787.dbd1936b.chunk.js.map": "/PostApp/static/js/787.dbd1936b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cad59dcc.css",
-    "static/js/main.6ae9e5d2.js"
+    "static/js/main.c96b46e7.js"
   ]
 }
