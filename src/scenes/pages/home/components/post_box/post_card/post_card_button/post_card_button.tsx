@@ -24,13 +24,14 @@ export const PostCardButton = ({ imageSrc }: imageProps, { onClickEvent }: Butto
     useEffect(() => {
         const timer = setInterval(() => {
             setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
-        }, 800);
+        }, 1000);
         return () => {
             setTimeout(() => {
+                clearInterval(timer)
                 dispatch(setLoadingAction(false))
-            }, 8000);
+            }, 5000);
         };
-    }, []);
+    }, [progress]);
 
 
     return (
